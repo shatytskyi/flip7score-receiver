@@ -1,6 +1,6 @@
 # Privacy Policy — Flip 7 Score Tracker
 
-**Effective date:** August 20, 2026
+**Effective date:** August 21, 2026
 
 This privacy policy applies to the **Flip 7 Score Tracker** app for Android (package
 `com.shatytskyi.flip7score`), developed by Serhii Hatytskyi ("I", "me"). It describes what data
@@ -9,7 +9,9 @@ the app handles, what little of it leaves your device, and the choices you have.
 ## The short version
 
 - Everything you enter in the app — player names, scores, groups, settings — **stays on your
-  device**. It is never uploaded anywhere.
+  device**. It is never uploaded to me or to any server. Two optional features send it straight to
+  another device you or your fellow players own: casting the scoreboard to a TV, and sharing score
+  entry with a second phone at the same table.
 - The app collects **anonymous usage statistics and crash reports** to help me improve it. This
   data contains no names, no accounts, no precise location, and no advertising identifiers.
 - You can **turn usage statistics off** at any time in Settings → "Share anonymous usage data".
@@ -23,6 +25,38 @@ data or uninstalling the app removes them permanently.
 
 When you cast the scoreboard to a TV, the score data is sent directly to the Chromecast device on
 your local network for display. It is not sent to my servers.
+
+## Sharing score entry with a second phone
+
+The app can let a second phone at your table enter scores for the same game ("co-judging"). While
+such a session is running:
+
+- The two phones talk **directly to each other** over Bluetooth and Wi-Fi, using Google's Nearby
+  Connections service. The connection is encrypted and does not go through my servers or the
+  internet.
+- What travels between them is the game itself: **player names, scores, round history, the game
+  mode and the target score** — the same information both players are already looking at across
+  the table. The phone that joins keeps a copy only while the session lasts.
+- Nothing else is transmitted: no contacts, no accounts, no files, no location.
+- A session only exists while you start one, and only with a phone whose join request you accept
+  by hand. Either side can end it at any time, and closing the app ends it too.
+- Your phone advertises the game under the name you choose and the device model name (for example
+  "Pixel 7") so the other player can tell which phone is which. Pick a different game name if you
+  would rather not show it.
+
+### Why the app asks for Bluetooth, Wi-Fi and (on older Android) location permission
+
+Nearby Connections finds the other phone over Bluetooth and Wi-Fi, and Android guards those radios
+with permissions:
+
+- **Nearby devices / Bluetooth** (Android 12 and newer) — to discover and connect to the other
+  phone. The app declares these as "never used for location".
+- **Location** (Android 12L and older only) — on those versions Android required location
+  permission before any app could scan for nearby devices, so the app has to ask for it to offer
+  the feature at all. **The app never reads, stores or transmits your location**, and the
+  permission is not requested on newer Android versions.
+
+These permissions are used only while you are setting up or running a co-judging session.
 
 ## Anonymous usage statistics (analytics)
 
@@ -61,7 +95,9 @@ policy.
 The app is a family-friendly score keeper and complies with the Google Play Families Policy. It
 collects no personal information from any user, children included: no names, no contact details,
 no precise location, and no advertising identifiers. The anonymous identifiers described above
-are random, app-scoped, and used solely for aggregate statistics and crash reporting.
+are random, app-scoped, and used solely for aggregate statistics and crash reporting. The location
+permission that older Android versions require for finding a nearby phone is an exception only on
+paper: as described above, no location is ever read, stored or sent.
 
 ## Data retention and deletion
 
