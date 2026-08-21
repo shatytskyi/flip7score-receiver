@@ -20,8 +20,12 @@ the app handles, what little of it leaves your device, and the choices you have.
 ## Data stored only on your device
 
 Player names, scores, round history, saved player groups, and app settings are stored in a local
-database on your device. They are not transmitted to me or to anyone else. Deleting the app's
-data or uninstalling the app removes them permanently.
+database on your device. **None of it is ever transmitted to me, and none of it goes to any
+server.** Deleting the app's data or uninstalling the app removes it permanently.
+
+Two optional features do send some of it off your phone, and only to a device in the room with
+you: casting the scoreboard to a TV, and sharing score entry with a second phone. Both are
+described below.
 
 When you cast the scoreboard to a TV, the score data is sent directly to the Chromecast device on
 your local network for display. It is not sent to my servers.
@@ -34,15 +38,22 @@ such a session is running:
 - The two phones talk **directly to each other** over Bluetooth and Wi-Fi, using Google's Nearby
   Connections service. The connection is encrypted and does not go through my servers or the
   internet.
-- What travels between them is the game itself: **player names, scores, round history, the game
-  mode and the target score** — the same information both players are already looking at across
-  the table. The phone that joins keeps a copy only while the session lasts.
+- The hosting phone sends the game as it stands: **the game name, each player's name, total score,
+  number of rounds played and current position, who has won, and the game settings** (game mode,
+  target score and the two Mixed-mode rules). This is the same information both players are already
+  looking at across the table. Round-by-round history is **not** sent.
+- The joining phone sends back **the rounds it enters** (the cards picked, or a manually typed
+  score) and **its device model name** (for example "Pixel 7"), which the host sees when deciding
+  whether to let it in. While that phone is entering a score for a player, its device model is also
+  shown to the other phones in the session, so everyone can see the player is taken.
+- The joining phone keeps the game only in memory, for as long as the session lasts. It is not
+  saved to that phone's own game database.
 - Nothing else is transmitted: no contacts, no accounts, no files, no location.
 - A session only exists while you start one, and only with a phone whose join request you accept
   by hand. Either side can end it at any time, and closing the app ends it too.
-- Your phone advertises the game under the name you choose and the device model name (for example
-  "Pixel 7") so the other player can tell which phone is which. Pick a different game name if you
-  would rather not show it.
+- While you are sharing a game, your phone advertises **the game name** you chose to any nearby
+  phone running this app and looking for a game to join. It does not advertise your device name.
+  Pick a different game name if you would rather not show it.
 
 ### Why the app asks for Bluetooth, Wi-Fi and (on older Android) location permission
 
@@ -105,7 +116,8 @@ Analytics events and crash reports are anonymous and cannot be linked back to yo
 means I cannot locate and delete "your" records on request. Analytics data is retained by PostHog
 according to its standard retention policy, and crash data by Firebase according to Google's
 retention policy. All locally stored data is under your control and disappears when you clear the
-app's data or uninstall it.
+app's data or uninstall it. Nothing is retained from a co-judging session: the copy of the game on
+the joining phone is held in memory only and is gone when the session ends.
 
 ## Changes to this policy
 
