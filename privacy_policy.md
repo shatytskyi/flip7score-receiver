@@ -11,7 +11,7 @@ the app handles, what little of it leaves your device, and the choices you have.
 - Everything you enter in the app — player names, scores, groups, settings — **stays on your
   device**. It is never uploaded to me or to any server. Two optional features send it straight to
   another device you or your fellow players own: casting the scoreboard to a TV, and sharing score
-  entry with a second phone at the same table.
+  entry with other phones at the same table.
 - The app collects **anonymous usage statistics and crash reports** to help me improve it. This
   data contains no names, no accounts, no precise location, and no advertising identifiers.
 - You can **turn usage statistics off** at any time in Settings → "Share anonymous usage data".
@@ -24,29 +24,30 @@ database on your device. **None of it is ever transmitted to me, and none of it 
 server.** Deleting the app's data or uninstalling the app removes it permanently.
 
 Two optional features do send some of it off your phone, and only to a device in the room with
-you: casting the scoreboard to a TV, and sharing score entry with a second phone. Both are
+you: casting the scoreboard to a TV, and sharing score entry with another phone. Both are
 described below.
 
 When you cast the scoreboard to a TV, the score data is sent directly to the Chromecast device on
 your local network for display. It is not sent to my servers.
 
-## Sharing score entry with a second phone
+## Sharing score entry with other phones
 
-The app can let a second phone at your table enter scores for the same game ("co-judging"). While
-such a session is running:
+The app can let other phones at your table enter scores for the same game ("co-judging") — usually
+one, but there is no fixed limit. One phone hosts the game and the others join it. While such a
+session is running:
 
-- The two phones talk **directly to each other** over Bluetooth and Wi-Fi, using Google's Nearby
+- The phones talk **directly to each other** over Bluetooth and Wi-Fi, using Google's Nearby
   Connections service. The connection is encrypted and does not go through my servers or the
   internet.
 - The hosting phone sends the game as it stands: **the game name, each player's name, total score,
   number of rounds played and current position, who has won, and the game settings** (game mode,
-  target score and the two Mixed-mode rules). This is the same information both players are already
-  looking at across the table. Round-by-round history is **not** sent.
-- The joining phone sends back **the rounds it enters** (the cards picked, or a manually typed
+  target score and the two Mixed-mode rules). This is the same information everyone at the table is
+  already looking at. Round-by-round history is **not** sent.
+- A joining phone sends back **the rounds it enters** (the cards picked, or a manually typed
   score) and **its device model name** (for example "Pixel 7"), which the host sees when deciding
   whether to let it in. While that phone is entering a score for a player, its device model is also
   shown to the other phones in the session, so everyone can see the player is taken.
-- The joining phone keeps the game only in memory, for as long as the session lasts. It is not
+- A joining phone keeps the game only in memory, for as long as the session lasts. It is not
   saved to that phone's own game database.
 - Nothing else is transmitted: no contacts, no accounts, no files, no location.
 - A session only exists while you start one, and only with a phone whose join request you accept
@@ -57,11 +58,11 @@ such a session is running:
 
 ### Why the app asks for Bluetooth, Wi-Fi and (on older Android) location permission
 
-Nearby Connections finds the other phone over Bluetooth and Wi-Fi, and Android guards those radios
+Nearby Connections finds the other phones over Bluetooth and Wi-Fi, and Android guards those radios
 with permissions:
 
 - **Nearby devices / Bluetooth** (Android 12 and newer) — to discover and connect to the other
-  phone. The app declares these as "never used for location".
+  phones. The app declares these as "never used for location".
 - **Location** (Android 12L and older only) — on those versions Android required location
   permission before any app could scan for nearby devices, so the app has to ask for it to offer
   the feature at all. **The app never reads, stores or transmits your location**, and the
@@ -117,7 +118,7 @@ means I cannot locate and delete "your" records on request. Analytics data is re
 according to its standard retention policy, and crash data by Firebase according to Google's
 retention policy. All locally stored data is under your control and disappears when you clear the
 app's data or uninstall it. Nothing is retained from a co-judging session: the copy of the game on
-the joining phone is held in memory only and is gone when the session ends.
+each joining phone is held in memory only and is gone when the session ends.
 
 ## Changes to this policy
 
