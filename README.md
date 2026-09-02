@@ -1,2 +1,2 @@
 # flip7score-receiver
-Hosted Google Cast receiver for Flip 7 Score
+Google Cast receiver for Score Tracker for Flip 7, an unofficial companion app. Flip 7 is a trademark of USAopoly LLC; not affiliated with or endorsed by USAopoly.
