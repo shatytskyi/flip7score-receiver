@@ -1,8 +1,8 @@
-# Privacy Policy — Flip 7 Score Tracker
+# Privacy Policy — Score Tracker for Flip 7
 
-**Effective date:** August 21, 2026
+**Effective date:** September 1, 2026
 
-This privacy policy applies to the **Flip 7 Score Tracker** app for Android (package
+This privacy policy applies to the **Score Tracker for Flip 7** app for Android (package
 `com.shatytskyi.flip7score`), developed by Serhii Hatytskyi ("I", "me"). It describes what data
 the app handles, what little of it leaves your device, and the choices you have.
 
@@ -82,8 +82,11 @@ was changed") to **PostHog**, an analytics service, hosted in the **European Uni
 - Events never include player names, scores you enter, or any content you create.
 - Your **IP address is discarded** by the analytics service and is not stored with events; only
   a coarse country-level location derived from it is kept.
-- If you make a donation inside the app, an anonymous event records which donation tier was
-  purchased (never payment details — payments are processed entirely by Google Play).
+- If you make the optional supporter purchase, anonymous events record that a purchase was started
+  and how it ended — completed, pending, cancelled or failed — and which screen it was started
+  from. When that screen was the theme picker, they also record the colour palette and animated
+  background you were trying to unlock. They never include payment details, an order number, or
+  even which product was bought; payments are processed entirely by Google Play.
 - **Opt out any time**: Settings → "Share anonymous usage data". When disabled, no usage events
   leave your device.
 
@@ -97,8 +100,12 @@ for details on how Firebase processes this data.
 
 ## Purchases
 
-Optional donations are one-time purchases processed by **Google Play**. I never receive or store
-your payment details. Google's handling of payment data is described in the
+The app has one optional purchase: a single payment, processed by **Google Play**, that permanently
+unlocks the paid colour themes and animated backgrounds. There is no subscription and nothing in
+the app expires. Earlier versions offered optional donations instead; if you made one, it is still
+honoured and unlocks the same content, and no new donation can be made. I never receive or store
+your payment details.
+Google's handling of payment data is described in the
 [Google Play Terms of Service](https://play.google.com/about/play-terms/) and Google's privacy
 policy.
 
@@ -127,4 +134,4 @@ revised. Material changes will be reflected in the app's Play Store data safety 
 
 ## Contact
 
-Questions about privacy in Flip 7 Score Tracker: **serhii.hatytskyi@gmail.com**
+Questions about privacy in Score Tracker for Flip 7: **serhii.hatytskyi@gmail.com**
