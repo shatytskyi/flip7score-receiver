@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Score Tracker for Flip 7</title>
+<style>
+:root { --bg: #fbf8fd; --fg: #1b1b21; --muted: #46464f; --link: #3f5aa9; --code: #ecebf2; }
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #131318; --fg: #e4e1e9; --muted: #c6c5d0; --link: #b4c5ff; --code: #2a292f; }
+}
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--fg);
+  font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+main { max-width: 42rem; margin: 0 auto; padding: 24px 16px 48px; }
+h1 { font-size: 1.6rem; line-height: 1.25; margin: 0 0 16px; }
+h2 { font-size: 1.25rem; line-height: 1.3; margin: 32px 0 8px; }
+h3 { font-size: 1.05rem; margin: 24px 0 8px; }
+p, li { color: var(--fg); }
+ul { padding-left: 1.25rem; }
+li + li { margin-top: 6px; }
+a { color: var(--link); overflow-wrap: anywhere; }
+code { background: var(--code); border-radius: 4px; padding: 0 4px; font-size: 0.9em;
+  overflow-wrap: anywhere; }
+</style>
+</head>
+<body>
+<main>
+<h1>Privacy Policy — Score Tracker for Flip 7</h1>
+<p><strong>Effective date:</strong> October 15, 2026</p>
+<p>This privacy policy applies to the <strong>Score Tracker for Flip 7</strong> app for Android (package <code>com.shatytskyi.flip7score</code>), developed by Serhii Hatytskyi ("I", "me"). It describes what data the app handles, what little of it leaves your device, and the choices you have.</p>
+<h2>The short version</h2>
+<ul><li>Everything you enter in the app — player names, scores, groups, settings — <strong>stays on your device</strong>. The app has no server of its own and never uploads it to me. Two optional features send it straight to another device in the room: casting the scoreboard to a TV, and sharing score entry with other phones at the same table. If you have Android backup turned on, Android may also copy the app's data to <strong>your own Google account</strong> (see below).</li><li>The app collects <strong>anonymous usage statistics and crash reports</strong> to help me improve it. This data contains no names, no accounts, no precise location, and no advertising identifiers.</li><li>You can <strong>turn usage statistics off</strong> at any time in Settings → "Share anonymous usage data".</li><li>The app shows <strong>no ads</strong> and sells no data.</li></ul>
+<h2>Data stored only on your device</h2>
+<p>Player names, scores, round history, saved player groups, and app settings are stored in a local database on your device. <strong>The app never transmits it to me, and the app operates no server.</strong> Deleting the app's data or uninstalling the app removes it from the device.</p>
+<p><strong>Android backup.</strong> If you have Android's backup turned on, Android may copy the app's local data — including player names, scores and groups — to your own Google account, and restore it when you set up a new phone or reinstall the app. This is done by Android and Google, not by the app, and I cannot see it. You can turn it off in your phone's system settings (Google → Backup), and deleting the backup there removes the copy.</p>
+<p>Two optional features do send some of it off your phone, and only to a device in the room with you: casting the scoreboard to a TV, and sharing score entry with another phone. Both are described below.</p>
+<p><strong>Casting to a TV.</strong> While you cast, the scoreboard — player names and scores — is sent over your local network to the Chromecast device for display. The session runs through Google Cast, and the TV loads the scoreboard page from a public website (GitHub Pages) hosted by me. Your game data is not sent to my servers; the page itself contains none of it.</p>
+<h2>Sharing score entry with other phones</h2>
+<p>The app can let other phones at your table enter scores for the same game ("co-judging") — usually one, but there is no fixed limit. One phone hosts the game and the others join it. While such a session is running:</p>
+<ul><li>The phones talk <strong>directly to each other</strong> over Bluetooth and Wi-Fi, using Google's Nearby Connections service. The connection is encrypted and does not go through my servers or the internet.</li><li>The hosting phone sends the game as it stands: <strong>the game name, each player's name, total score, number of rounds played and current position, who has won, and the game settings</strong> (game mode, target score and the two Mixed-mode rules). This is the same information everyone at the table is already looking at. Round-by-round history is <strong>not</strong> sent.</li><li>A joining phone sends back <strong>the rounds it enters</strong> (the cards picked, or a manually typed score) and <strong>its device model name</strong> (for example "Pixel 7"), which the host sees when deciding whether to let it in. While that phone is entering a score for a player, its device model is also shown to the other phones in the session, so everyone can see the player is taken.</li><li>A joining phone keeps the game only in memory, for as long as the session lasts. It is not saved to that phone's own game database.</li><li>Nothing else is transmitted: no contacts, no accounts, no files, no location.</li><li>A session only exists while you start one, and only with a phone whose join request you accept by hand. Either side can end it at any time, and closing the app ends it too.</li><li>While you are sharing a game, your phone advertises <strong>the game name</strong> you chose to any nearby phone running this app and looking for a game to join. It does not advertise your device name. Pick a different game name if you would rather not show it.</li></ul>
+<h3>Why the app asks for Bluetooth, Wi-Fi and (on older Android) location permission</h3>
+<p>Nearby Connections finds the other phones over Bluetooth and Wi-Fi, and Android guards those radios with permissions:</p>
+<ul><li><strong>Nearby devices / Bluetooth</strong> (Android 12 and newer) — to discover and connect to the other phones. The app declares these as "never used for location".</li><li><strong>Location</strong> (Android 12L and older only) — on those versions Android required location permission before any app could scan for nearby devices, so the app has to ask for it to offer the feature at all. <strong>The app never reads, stores or transmits your location</strong>, and the permission is not requested on newer Android versions.</li></ul>
+<p>These permissions are used only while you are setting up or running a co-judging session.</p>
+<h2>Anonymous usage statistics (analytics)</h2>
+<p>To understand which features are used and how the app can be improved, the app sends anonymous usage events (for example: "a game was completed", "the TV casting dialog was opened", "a setting was changed") to <strong>PostHog</strong>, an analytics service, hosted in the <strong>European Union</strong> (PostHog Cloud EU).</p>
+<ul><li>Events are tied to a <strong>random identifier</strong> generated inside the app. It is not your name, not your email, and not an advertising ID; it cannot be used to identify you.</li><li>Events never include player names, scores you enter, or any content you create.</li><li>Your <strong>IP address is discarded</strong> by the analytics service and is not stored with events; only a coarse country-level location derived from it is kept.</li><li>If you make the optional supporter purchase, anonymous events record that a purchase was started and how it ended — completed, pending, cancelled or failed — and which screen it was started from. When that screen was the theme picker, they also record the colour palette and animated background you were trying to unlock. They never include payment details, an order number, or even which product was bought; payments are processed entirely by Google Play.</li><li>Events also carry basic device and app information (device model, Android version, language, app version, screen density) and the current in-app settings (such as colour theme, game mode, text size and how long the app has been installed), so usage can be compared across setups. None of it identifies a person.</li><li><strong>Opt out any time</strong>: Settings → "Share anonymous usage data". When disabled, no usage events leave your device.</li></ul>
+<h2>Crash reports</h2>
+<p>The app uses <strong>Firebase Crashlytics</strong> (a Google service) to collect crash reports: stack traces, the state of the app at the moment of the crash, device model and OS version, and a random installation identifier. Crash reports help me find and fix bugs. This data is not used for advertising. See <a href="https://firebase.google.com/support/privacy" rel="noopener">Google's privacy documentation</a> for details on how Firebase processes this data.</p>
+<h2>Purchases</h2>
+<p>The app has one optional purchase: a single payment, processed by <strong>Google Play</strong>, that permanently unlocks the paid colour themes and animated backgrounds. There is no subscription and nothing in the app expires. Earlier versions offered optional donations instead; if you made one, it is still honoured and unlocks the same content, and no new donation can be made. I never receive or store your payment details. Google's handling of payment data is described in the <a href="https://play.google.com/about/play-terms/" rel="noopener">Google Play Terms of Service</a> and Google's privacy policy.</p>
+<h2>Children</h2>
+<p>The app is a family-friendly score keeper and complies with the Google Play Families Policy. It collects no personal information from any user, children included: no names, no contact details, no precise location, and no advertising identifiers. The anonymous identifiers described above are random, app-scoped, and used solely for aggregate statistics and crash reporting. The location permission that older Android versions require for finding a nearby phone is an exception only on paper: as described above, no location is ever read, stored or sent.</p>
+<h2>Data retention and deletion</h2>
+<p>Analytics events and crash reports are anonymous and cannot be linked back to you, which also means I cannot locate and delete "your" records on request. Analytics data is retained by PostHog according to its standard retention policy, and crash data by Firebase according to Google's retention policy. All locally stored data is under your control and disappears from the device when you clear the app's data or uninstall it; a copy made by Android backup stays in your Google account until you delete it there. Nothing is retained from a co-judging session: the copy of the game on each joining phone is held in memory only and is gone when the session ends.</p>
+<h2>Changes to this policy</h2>
+<p>If the app's data practices change, this policy will be updated and the effective date above revised. Material changes will be reflected in the app's Play Store data safety section as well.</p>
+<h2>Contact</h2>
+<p>Questions about privacy in Score Tracker for Flip 7: <strong>serhii.hatytskyi@gmail.com</strong></p>
+</main>
+</body>
+</html>

@@ -1,6 +1,6 @@
 # Privacy Policy — Score Tracker for Flip 7
 
-**Effective date:** September 1, 2026
+**Effective date:** October 15, 2026
 
 This privacy policy applies to the **Score Tracker for Flip 7** app for Android (package
 `com.shatytskyi.flip7score`), developed by Serhii Hatytskyi ("I", "me"). It describes what data
@@ -9,9 +9,10 @@ the app handles, what little of it leaves your device, and the choices you have.
 ## The short version
 
 - Everything you enter in the app — player names, scores, groups, settings — **stays on your
-  device**. It is never uploaded to me or to any server. Two optional features send it straight to
-  another device you or your fellow players own: casting the scoreboard to a TV, and sharing score
-  entry with other phones at the same table.
+  device**. The app has no server of its own and never uploads it to me. Two optional features send
+  it straight to another device in the room: casting the scoreboard to a TV, and sharing score
+  entry with other phones at the same table. If you have Android backup turned on, Android may
+  also copy the app's data to **your own Google account** (see below).
 - The app collects **anonymous usage statistics and crash reports** to help me improve it. This
   data contains no names, no accounts, no precise location, and no advertising identifiers.
 - You can **turn usage statistics off** at any time in Settings → "Share anonymous usage data".
@@ -20,15 +21,23 @@ the app handles, what little of it leaves your device, and the choices you have.
 ## Data stored only on your device
 
 Player names, scores, round history, saved player groups, and app settings are stored in a local
-database on your device. **None of it is ever transmitted to me, and none of it goes to any
-server.** Deleting the app's data or uninstalling the app removes it permanently.
+database on your device. **The app never transmits it to me, and the app operates no server.**
+Deleting the app's data or uninstalling the app removes it from the device.
+
+**Android backup.** If you have Android's backup turned on, Android may copy the app's local data
+— including player names, scores and groups — to your own Google account, and restore it when you
+set up a new phone or reinstall the app. This is done by Android and Google, not by the app, and I
+cannot see it. You can turn it off in your phone's system settings (Google → Backup), and
+deleting the backup there removes the copy.
 
 Two optional features do send some of it off your phone, and only to a device in the room with
 you: casting the scoreboard to a TV, and sharing score entry with another phone. Both are
 described below.
 
-When you cast the scoreboard to a TV, the score data is sent directly to the Chromecast device on
-your local network for display. It is not sent to my servers.
+**Casting to a TV.** While you cast, the scoreboard — player names and scores — is sent over your
+local network to the Chromecast device for display. The session runs through Google Cast, and the
+TV loads the scoreboard page from a public website (GitHub Pages) hosted by me. Your game data is
+not sent to my servers; the page itself contains none of it.
 
 ## Sharing score entry with other phones
 
@@ -87,6 +96,10 @@ was changed") to **PostHog**, an analytics service, hosted in the **European Uni
   from. When that screen was the theme picker, they also record the colour palette and animated
   background you were trying to unlock. They never include payment details, an order number, or
   even which product was bought; payments are processed entirely by Google Play.
+- Events also carry basic device and app information (device model, Android version, language, app
+  version, screen density) and the current in-app settings (such as colour theme, game mode, text
+  size and how long the app has been installed), so usage can be compared across setups. None of it
+  identifies a person.
 - **Opt out any time**: Settings → "Share anonymous usage data". When disabled, no usage events
   leave your device.
 
@@ -123,9 +136,10 @@ paper: as described above, no location is ever read, stored or sent.
 Analytics events and crash reports are anonymous and cannot be linked back to you, which also
 means I cannot locate and delete "your" records on request. Analytics data is retained by PostHog
 according to its standard retention policy, and crash data by Firebase according to Google's
-retention policy. All locally stored data is under your control and disappears when you clear the
-app's data or uninstall it. Nothing is retained from a co-judging session: the copy of the game on
-each joining phone is held in memory only and is gone when the session ends.
+retention policy. All locally stored data is under your control and disappears from the device
+when you clear the app's data or uninstall it; a copy made by Android backup stays in your Google
+account until you delete it there. Nothing is retained from a co-judging session: the copy of the
+game on each joining phone is held in memory only and is gone when the session ends.
 
 ## Changes to this policy
 
