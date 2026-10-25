@@ -1,6 +1,6 @@
 # Privacy Policy — Score Tracker for Flip 7
 
-**Effective date:** October 15, 2026
+**Effective date:** October 25, 2026
 
 This privacy policy applies to the **Score Tracker for Flip 7** app for Android (package
 `com.shatytskyi.flip7score`), developed by Serhii Hatytskyi ("I", "me"). It describes what data
@@ -12,7 +12,8 @@ the app handles, what little of it leaves your device, and the choices you have.
   device**. The app has no server of its own and never uploads it to me. Two optional features send
   it straight to another device in the room: casting the scoreboard to a TV, and sharing score
   entry with other phones at the same table. If you have Android backup turned on, Android may
-  also copy the app's data to **your own Google account** (see below).
+  also copy the app's data to **your own Google account** (see below). A backup file you export
+  yourself goes only where you save or share it.
 - The app collects **anonymous usage statistics and crash reports** to help me improve it. This
   data contains no names, no accounts, no precise location, and no advertising identifiers.
 - You can **turn usage statistics off** at any time in Settings → "Share anonymous usage data".
@@ -29,6 +30,12 @@ Deleting the app's data or uninstalling the app removes it from the device.
 set up a new phone or reinstall the app. This is done by Android and Google, not by the app, and I
 cannot see it. You can turn it off in your phone's system settings (Google → Backup), and
 deleting the backup there removes the copy.
+
+**Backup files you export.** If you export a backup from Settings, the app writes a copy of its
+local data — player names, scores, groups and game history — to a file in the place you pick in
+Android's file picker (your phone, a USB drive or a cloud drive such as Google Drive), or hands it
+to the app you share it to (for example a messenger or email); the app sends that file nowhere
+else and I never receive it. Restoring a backup reads only the file you pick, on your phone.
 
 Two optional features do send some of it off your phone, and only to a device in the room with
 you: casting the scoreboard to a TV, and sharing score entry with another phone. Both are
@@ -138,7 +145,8 @@ means I cannot locate and delete "your" records on request. Analytics data is re
 according to its standard retention policy, and crash data by Firebase according to Google's
 retention policy. All locally stored data is under your control and disappears from the device
 when you clear the app's data or uninstall it; a copy made by Android backup stays in your Google
-account until you delete it there. Nothing is retained from a co-judging session: the copy of the
+account until you delete it there, and a backup file you exported stays wherever you saved or
+shared it until you delete it. Nothing is retained from a co-judging session: the copy of the
 game on each joining phone is held in memory only and is gone when the session ends.
 
 ## Changes to this policy
